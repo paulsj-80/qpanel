@@ -53,9 +53,9 @@ class Freeswitch:
         cmd = self.command('show channels')
         cmd = self._parserBodyCommand(cmd, ',')
         for channel in cmd:
-            if cmd[channel]['Application'] == 'callcenter':
-                if cmd[channel]['ApplicationData'] == queue_name:
-                    output[channel] = cmd[channel]
+            #if cmd[channel]['Application'] == 'callcenter':
+            #    if cmd[channel]['ApplicationData'] == queue_name:
+            output[channel] = cmd[channel]
 
         return output
 
